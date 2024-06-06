@@ -35,5 +35,13 @@ pip install easygui
 # Download ZIP Folder
 Alternatively, you can download the ZIP folder containing the executable file and accounts.txt. Once downloaded, extract the contents to a location of your choice on your computer.
 
+## Important Note
+
+**Antivirus Software Warning:** Some antivirus software may detect the executable file and the ZIP folder containing it as potential threats. This is a false positive, and the system is not a virus. It's common for executable files and compressed folders to trigger antivirus alerts, especially if they're not widely recognized. To proceed, you may need to whitelist the executable and the ZIP folder in your antivirus software or temporarily disable it during download, extraction, and execution.
+
+When downloading the ZIP folder, ensure that your antivirus software does not automatically quarantine or delete it. You may need to adjust your antivirus settings to allow the download and extraction of the ZIP folder. Once downloaded, extract the contents to a location of your choice on your computer.
+
+If you encounter any issues or have concerns about the safety of the system, please feel free to do your own research or seek assistance from other sources.
+
 # Credits
 This system was created by sievlong Pov. If you have any questions or feedback, please contact pov.sievlong@gmail.com.
