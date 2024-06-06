@@ -45,3 +45,10 @@ If you encounter any issues or have concerns about the safety of the system, ple
 
 # Credits
 This system was created by sievlong Pov. If you have any questions or feedback, please contact pov.sievlong@gmail.com.
+
+# Contact
+If you want to contact me you can reach me by the any of my social media below:
+[Facebook](https://www.facebook.com/pov.sievlong/)
+[Instagram](https://www.instagram.com/sievlong.p/)
+[LinkedIN](https://www.linkedin.com/in/sievlong-pov-aa1023248/)
+[Gmail](pov.sievlong@gmail.com)
