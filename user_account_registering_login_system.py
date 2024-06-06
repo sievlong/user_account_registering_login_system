@@ -7,12 +7,11 @@ import subprocess
 def show_logo():
     subprocess.run(['start', 'logo.ico'], shell=True)
 
-letters = string.ascii_letters  # Alphabet letters (upper and lower case)
-digits = string.digits  # All numbers 0-9
-symbols = string.punctuation  # All special characters/symbols
+letters = string.ascii_letters  
+digits = string.digits  
+symbols = string.punctuation  
 
 def generate_user_id():
-    # Generate a random 4-digit numerical user ID
     return ''.join(random.choices(string.digits, k=4))
 
 def register():
@@ -20,7 +19,7 @@ def register():
     field_values = eg.multenterbox("Please enter your information:", "Registration Form", field_names)
 
     if field_values is None:
-        return  # Return to main menu if canceled
+        return  
 
     entered_username = field_values[0]
 
@@ -45,7 +44,7 @@ def register():
     password = ""
     choice = eg.buttonbox("Do you want to generate a password?", choices=['Yes', 'No', 'Cancel'])
     if choice == "Cancel":
-        return  # Return to main menu if canceled
+        return  
     elif choice.lower() == "yes":
         msg = "Select password options:"
         title = "Password Options"
@@ -69,10 +68,10 @@ def register():
     elif choice.lower() == "no":
         entered_password = eg.passwordbox("Enter your password:")
         if entered_password is None:
-            return  # Return to main menu if canceled
+            return  
         verify_password = eg.passwordbox("Verify password:")
         if verify_password is None:
-            return  # Return to main menu if canceled
+            return  
         if entered_password == verify_password:
             password = entered_password
         else:
@@ -88,7 +87,7 @@ def register():
 def user_login():
     entered_username = eg.enterbox("Enter your username:")
     if entered_username is None:
-        return False, False  # Return to main menu if canceled
+        return False, False  
 
     found_user = False
     with open("accounts.txt", "r") as file:
@@ -104,26 +103,26 @@ def user_login():
 
     entered_password = eg.passwordbox("Enter your password:")
     if entered_password is None:
-        return False, False  # Return to main menu if canceled
+        return False, False  
 
     with open("accounts.txt", "r") as file:
         for line in file:
             fields = line.strip().split(" ")
             if len(fields) >= 3 and entered_username == fields[1] and entered_password == fields[2]:
                 eg.msgbox("Login successful", "Success")
-                return True, fields[0]  # Return True for successful login and user ID
+                return True, fields[0]  
 
     eg.msgbox("Invalid password", "Error")
-    return False, False  # Return False if login failed
+    return False, False  
 
 
 def admin_login():
     entered_username = eg.enterbox("Enter admin username:")
     if entered_username is None:
-        return False  # Return to main menu if canceled
+        return False  
     entered_password = eg.passwordbox("Enter admin password:")
     if entered_password is None:
-        return False  # Return to main menu if canceled
+        return False  
 
     return entered_username == "admin" and entered_password == "admin"
 
@@ -152,7 +151,7 @@ def display_accounts():
     if choice == "Delete a user":
         user_to_delete = eg.enterbox("Enter the user ID to delete:")
         if user_to_delete is None:
-            return  # Return to previous page if canceled
+            return  
         updated_accounts = [line for line in accounts if not line.startswith(user_to_delete + " ")]
         if len(updated_accounts) != len(accounts):
             with open("accounts.txt", "w") as file:
@@ -163,7 +162,7 @@ def display_accounts():
     elif choice == "Update user info":
         user_id_to_update = eg.enterbox("Enter the user ID to update:")
         if user_id_to_update is None:
-            return  # Return to previous page if canceled
+            return  
         for i, line in enumerate(accounts):
             if line.startswith(user_id_to_update + " "):
                 updated_info = eg.multenterbox("Update user information:", "Update User Info", ["Username", "Password", "Email", "Age", "Gender"], [line.split()[1], line.split()[2], line.split()[3], line.split()[4], line.split()[5]])
