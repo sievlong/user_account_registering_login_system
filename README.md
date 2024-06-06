@@ -23,7 +23,7 @@ You can get started with the User Account Registration and Login System by follo
 To clone the repository to your local machine, use the following command:
 
 ```bash
-git clone https://github.com/your_username/your_repository.git
+git clone https://github.com/sievlong/user_account_registering_login_system.git
 ```
 # Install Required Packages
 Before running the program, make sure you have the necessary Python packages installed. You can install them using pip:
@@ -33,7 +33,7 @@ pip install easygui
 ```
 
 # Download ZIP Folder
-Alternatively, you can download the ZIP folder containing the executable file (your_script.exe) and accounts.txt. Once downloaded, extract the contents to a location of your choice on your computer.
+Alternatively, you can download the ZIP folder containing the executable file and accounts.txt. Once downloaded, extract the contents to a location of your choice on your computer.
 
 # Credits
 This system was created by sievlong Pov. If you have any questions or feedback, please contact pov.sievlong@gmail.com.
